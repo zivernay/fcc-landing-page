@@ -1,5 +1,4 @@
 body{
-    background-color: rgb(183, 211, 236);
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
 }
@@ -37,6 +36,7 @@ header .description{
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-bottom: 2em;
 }
 p{
     max-width: 720px;
@@ -62,9 +62,42 @@ p{
     color: white;
 }
 #nav-bar:hover{
-    box-shadow: 2px -1px 4px 2px rgb(1, 14, 34);
+    box-shadow: 2px -1px 4px 2px rgba(44, 48, 54, 0.274);
 }
 
+
+#content{
+    position: relative;
+}
+.left{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+.right{
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+input{
+    border: unset;
+    padding: 2px;
+}
+input[type="email"]{
+    padding-left: 10px;
+}
+input:focus{
+    outline: none;
+}
+.flex-cont div:hover{
+    box-shadow: 1px 1px 5px 3px rgba(128, 128, 128, 0.205);
+}
+input[type="submit"]{
+    background-color: rgb(38, 104, 148);
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 @media (max-width:850px) {
     #header-img{
         grid-area: 1/1/2/4;
@@ -82,6 +115,9 @@ p{
     #nav-bar div{
         padding: 4px;
     }
+    article{
+        width: 60%;
+    }
 }
 @media (max-width:500px) {
     header .description{
@@ -90,9 +126,47 @@ p{
     #nav-bar{
         grid-area: 3/1/4/4;
         flex-direction: row;
+        align-items: center;
         border-left: 1px solid rgba(0, 0, 0, 0.116);;
     }
     #nav-bar:hover{
         box-shadow: unset;
+    }
+    article{
+        width: 80%;
+        padding-right: 1em;
+        max-height: 200px;
+        overflow: scroll;
+        font-size: smaller;
+    }
+    article header{
+        font-size: medium;
+        margin-bottom: 1em;
+    }
+    #content{
+        height: 500px;
+    }
+    .mail-cont{
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top: 235px;
+    }
+    .mail-cont .flex-cont{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .flex-cont div{
+        width: 100%;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.267);
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5px;
+        
     }
 }
