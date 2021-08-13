@@ -3,7 +3,10 @@ body{
     font-size: medium;
 }
 header{
-    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -350px;
+    background-color: gray;
 }
 .grid{
     display: grid;
@@ -52,13 +55,14 @@ p{
     height: 190px;
     border-top: 1px solid rgba(0, 0, 0, 0.116);
     border-right: 1px solid rgba(0, 0, 0, 0.089);
+    background-color: rgb(0, 0, 0);
 }
 #nav-bar div{
     text-align: center;
     padding: 10px;
 }
 #nav-bar div:hover{
-    background-color: rgb(1, 21, 37);
+    background-color: rgb(0, 3, 172);
     color: white;
 }
 #nav-bar:hover{
@@ -97,6 +101,11 @@ input[type="submit"]{
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+footer{
+    background-color: rgba(128, 128, 128, 0.048);
+    padding: 1em;
+    font-size: small;
 }
 @media (max-width:850px) {
     #header-img{
@@ -167,6 +176,14 @@ input[type="submit"]{
         align-items: center;
         justify-content: space-between;
         padding-left: 5px;
-        
+    }
+    .video{
+        width: 100%;
+        padding: 1em;
+        background-color: black;
+    }
+    video{
+        max-width: 100%;
+        height: auto;
     }
 }
