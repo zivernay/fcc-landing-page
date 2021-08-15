@@ -4,8 +4,12 @@ body{
     font-weight: 500;
     min-height: 100vh;
     padding-bottom: 1em;
+    padding-top: 3em;
+    position: relative;
 }
 #nav-bar{
+    position: fixed;
+    top: 0;
     box-sizing: border-box;
     background: #000000;
     display: block;
@@ -25,7 +29,7 @@ body{
     border-bottom: 1px solid #ffffff;
     border-top: 1px solid #ffffff;
 }
-#header-img, img{
+#header-image, img{
     max-width: 80px;
 }
 .center{
@@ -123,7 +127,7 @@ footer{
         display: grid;
         grid-template-columns: auto auto 1fr auto auto;
         grid-template-rows: auto;
-        grid-gap: 2%;";
+        grid-gap: 2%;
     }
     #nav-bar{
         justify-content: flex-start;
